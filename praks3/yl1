@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+#Kuupäev
+#
+echo -n "Täna on " #Tekst
+date +"%A, %B %C, %G" #Väljastab päeva ja kuu; lisaks veel päeva ja aasta numbriline väärtus
+echo -n "Täna on" #Tekst
+date +"%H:%M" #väljastab preaguse kellaaja H -tunnid M- minutid
+echo " " #tühi rida
+echo -n "Kalender" #tekst
+cal #väljastab preaguse kalendrikuu

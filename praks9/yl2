@@ -1,0 +1,19 @@
+#!/bin/bash
+#Sisesta andmed
+echo -n "Ridade arv: "
+read rida
+echo -n "Tulpade arv: "
+read tulp
+#Ridade arv
+for (( i = 1; i<=$rida; i++))
+do
+#Rea number
+echo -n "$i."
+#Tulpade arv
+	for (( j = 1 ; j<=$tulp; j++ ))
+	do
+#Väljastamine
+		echo -n "*"
+	done
+echo ""
+done

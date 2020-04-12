@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+#Heroni valemiga arvutamine (Kolmnurga pindala arvutus)
+#Andmete sisestamine a b c küljed
+read -p "Sisesta esimese külje pikkus a:" a
+read -p "Sisesta teise külje pikkus b:" b
+read -p "Sisesta kolmanda külje pikkus c:" c
+#Kolmnurga ümbermõõdu arvutamine
+A2=`expr $a + $b + $c`
+#Ümbermõõdu jagamine 2ga
+B2=$(bc <<< "scale=2; ($A2)/2")
+#Heroni valemi kasutamine (ilma ruutjuureta)
+C2=$(bc <<< "scale=2; $B2*($B2-$a)*($B2-$b)*($B2-$c)")
+#Ruutjuure võtmine
+D2=$(bc <<< "scale=2; sqrt ($C2)")
+#Väljundiks on vastus koos kahe komakohaga.
+echo "Kolmnurga pindala on " $D2 " ruutcm'it."
+#
+#Finish

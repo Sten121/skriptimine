@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+#yl2
+#
+echo -n "Siim Mumm, " #Minu nimi
+echo -n "IS118, " #õppegrupp
+echo -n "Väga huvitav aine, " #Aine kirjeldus
+echo -n "peab hakkama saama" #edasijõudmine
+echo  "!" #123321
+#
+#skripti lõpp

@@ -1,0 +1,16 @@
+#!/bin/bash
+#Hostname leidmine
+echo -n $(hostname)
+#Leiab preaguse kellaaja
+echo -n " at " $(date +"%H:%M:%S")
+#näitab kui kaua on arvuti tööl olnud
+echo -n " on kasutusel" $(uptime -p)
+#muudab rea rohkem loetavamaks
+echo ""
+
+
+#Tunniöö
+#uptime käsust eraldatud nii tunnid kui ka minutid ja lisatud on tekst
+echo "Arvuti `hostname` on töötanud `uptime -p | cut -f1 -d "," | cut -f2 -d" "` tundi ja `uptime -p | cut -f2 -d"," | cut -f2 -d" "` minutit!"
+
+#Finito

@@ -1,0 +1,21 @@
+#!/bin/bash
+#Liidab paarisarvud 1-10 vahemikus
+
+a2=0
+n=1
+#Kas n on väiksem kui 11?
+for (( n=1; $n<11; n++))
+do
+#Kas arvud on paaris? kui vastus on 0 ss on tegu paarisarvuga.
+	jaak=$(bc <<< "$n % 2")
+#Kas jääk on 0?
+	if [ $jaak -eq 0 ];
+	then
+#Liidab paarisarvu eelmisdega kokku
+		a2=$(bc <<< "$a2 + $n")
+#Mis tuleb vastuseks peale igat ringi
+		echo $a2
+
+	fi
+done
+echo "Arvude vahemikus on paarisarvude summa: $a2"

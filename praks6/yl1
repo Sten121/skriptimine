@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+#Skript, mis küsib kasutaja käest ühe täisarvu.
+#Skript peab väljastama seletava kirjelduse, kas antud arv on paaris või mitte.
+echo -n "Sisesta suvaline täisarv: " 
+#Kasutaja sisestab suvalise täisarvu
+read num
+#salestab selle num alla
+j=$(($num %2))
+#jagab arvu kahega
+if [ $j -eq 0 ]
+#kui jääk on 0 siis on paaris ja kui jääk on 1 siis on paaritu arv
+then
+	echo "Paarisarv"
+else
+	echo "Paarituarv"
+fi
+#Finito

@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+#bussireis
+#Küsimused kasutajale andmete kogumiseks
+echo -n "Mitu reisijat on kokku: "
+read reisijad
+echo -n "Kohtade arv bussis: "
+read kohad
+#Arvutused, et leida busside arv ja kui palju inimesi jääb üle
+bussid=`expr $reisijad / $kohad` #Mitu bussi on vaja
+ylejaanud=`expr $reisijad % $kohad` #Mitu inimest üle jääb
+#Vastus, $ on märgitud varem arvutatud vastused
+echo "Täielikult on täidetud $bussid bussi. Maha jääb $ylejaanud inimest."
+#
+#Finito

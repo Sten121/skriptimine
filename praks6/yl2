@@ -1,0 +1,27 @@
+#!/bin/bash
+#
+#Bussi kohtade arvutamise skript.
+#Sisesta reisijate arv grupis
+echo "Reisijate arv grupis: "
+read g
+#Sisesta kohtade arv bussis
+echo "Kohtade arv bussis: "
+read bk
+#Kas kohti on rohkem kui grupis olevaid inimesi või vastupidi
+if [ $bk -gt $g ];then
+	kohad=`expr $bk - $g`
+	echo "Bussis on" $kohad " vaba kohta."
+#Mitu bussi saab täielikult täis, mitu kohta kokku ja kui palju jääb puudu
+else
+	buss=`expr $g / $bk`
+	maksimaalne=`expr $bk \* $buss`
+	emahu=`expr $g - $maksimaalne`
+#juhul kui inimesi on kokku rohkem kui kohti siis lisandub üks buss juurde
+	if [ $g -gt $maksimaalne ]
+	then
+		buss=`expr $buss + 1`
+	fi
+#Vastus, mitu bussi läheb vaja
+	echo "Kokku läheb vaja $buss täisbussi."
+#if lõppeb fi-ga
+fi

@@ -1,0 +1,25 @@
+#!/bin/bash
+#Andmete sisestamine
+echo -n "Mitu rida: "
+read rida
+echo -n "Mitu tulpa: "
+read tulp
+#
+#Tsükkel ridade vahetuseks
+for (( i=1; i<=$rida; i++ ))
+do
+#Väjastab ridade ja tulpade piisavalt tärne
+	for (( j=1; j<=$tulp; j++ ))
+	do
+	if [ $i -eq 1 -o $i -eq $rida ];
+	then
+	echo -n "*"
+	elif [ $j -eq 1 -o $j -eq $tulp ];
+	then
+	echo -n "*"
+	else
+	echo -n " "
+	fi
+	done
+echo " "
+done

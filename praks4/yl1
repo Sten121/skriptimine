@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+#kasutaja nime küsimimine ja tervitamine
+#
+echo -n "Sisesta oma ees-ja perenimi: "
+#Tekst, mis küsib kasutajalt ees ja perenime
+read eesnimi perenimi
+#eesnime ja perenime sisestus kasutaja poolt
+echo "Sinu eesnimi on $eesnimi ja perenimi on $perenimi"
+#Tekst, milles väljastatakse kasutaja poolt kirjutatud ees- ja perenimi-
+#
+#See on kõik

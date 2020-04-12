@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+#küpsisetort
+#Küsimused kasutajale andmete kogumiseks
+echo -n "Sisesta aluskandiku pikkus cm-tes: "
+read pikkus
+echo -n "Sisesta aluskandiku laius cm-tes: "
+read laius
+echo -n "Sisesta küpsiste pikkus cm-tes: "
+read kpikkus
+echo -n "Sisesta küpsiste laikus cm-tes: "
+read klaius
+echo -n "Sisesta mitu kihti on tordil: "
+read kiht
+echo -n "Sisesta mitu küpsist on ühes pakkis: "
+read pakk
+#
+#
+#Arvutan küpsiste pakkide arvu
+echo -n "Tuleb osta nii palju pakke küpsiseid: "
+expr $pikkus \* $laius / $kpikkus / $klaius \* $kiht / $pakk

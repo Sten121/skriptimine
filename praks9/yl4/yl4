@@ -1,0 +1,15 @@
+#!/bin/bash
+#Kujundi väljastamine ekraanile
+echo -n "Ridade arv: "
+read rida
+#Ridade arv ja arvu suurendamine
+for (( i = 1; i <= rida; i++ ))
+do
+	for ((j = 1 ; j <= i; j++))
+	do
+		echo -n "* "
+	done
+echo ""
+done
+
+#Finito

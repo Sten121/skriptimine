@@ -1,0 +1,33 @@
+#!/bin/bash
+#
+#Küsib andmeid
+
+echo -n "Sisesta kuu number: "
+read kuu
+
+#Kontrollib mis kuuga on tegemist
+if test $kuu -gt 1 -a $kuu -lt 3 -o $kuu -eq 12
+then
+	echo "Talvekuu"
+
+# 1-3 kuu ja 12 on Talvekuu ja 3-6 on Kevadkuu
+elif test $kuu -ge 3 -a $kuu -lt 6
+then
+	echo "Kevadkuu"
+
+# 6-8 on suvekuu
+elif test $kuu -ge 6 -a $kuu -lt 9
+	echo "Suvekuu"
+
+#9 - 12 on sygiskuu
+elif test $kuu -ge 6 -a $kuu -lt 12
+then
+	echo "Sygiskuu"
+
+#Kui väärus ei ole 1-12 vahel
+else
+	echo "Error"
+fi
+
+#Finish
+

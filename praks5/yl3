@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+#Reisi pikkuse arvutus
+#Sisendiks reisi kuupäev
+read -p "Sisesta millal soidad ara:" k
+#Sisendiks reisi ööpäevade pikkus
+read -p "Sisesta reisi ööpäevade pikkus:" p
+#Tagasi jõudmise nädalapäev
+echo "Tagasi oled nädala "`expr \( $k + $p \) % 7`". päeval."
+#
+#Finito

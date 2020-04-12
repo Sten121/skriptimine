@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+#var otsing
+#
+find /var/ -iname *.log 2>/dev/null -exec wc -l {} \; | sort -n -r
+#Script, mis otsib var kataloogis kasutajale kättesaadavad .log lõpuga failid
+#Kontrollib mitu rida on igas leitud failis ja sorteerib kahanemisjärjekorras
+#
+#Skripti lõpp
+#

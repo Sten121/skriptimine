@@ -1,0 +1,10 @@
+#! /bin/bash
+#Sisestame a ja b külje pikkused
+read -p "Sisesta a külje pikkus " a
+read -p "Sisesta b külje pikkus " b
+#Arvutab c väärtuse
+let "c= $a * $a + $b * $b"
+#võtab vastusest ruutjuure
+d=$(bc <<< "scale=2; sqrt ($c)")
+echo "Kolmas külg on " $d
+#Tehtud
